@@ -1,0 +1,25 @@
+{
+  "name": "cartridge-node-server",
+  "version": "0.0.1",
+  "description": "NodeJS express expansion pack for cartridge",
+  "main": "task.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cartridge/cartridge-node-server.git"
+  },
+  "author": "Code Computerlove",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cartridge/cartridge-node-server/issues"
+  },
+  "homepage": "https://github.com/cartridge/cartridge-node-server#readme",
+  "keywords": [
+    "gulp",
+    "dependency",
+    "cartridge",
+    "cartridge-module",
+    "cartridge-task",
+    "nodejs",
+    "server"
+  ]
+}

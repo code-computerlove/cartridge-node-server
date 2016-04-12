@@ -1,25 +1,55 @@
 {
-  "name": "cartridge-node-server",
-  "version": "0.0.1",
-  "description": "NodeJS express expansion pack for cartridge",
-  "main": "task.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cartridge/cartridge-node-server.git"
-  },
-  "author": "Code Computerlove",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cartridge/cartridge-node-server/issues"
-  },
-  "homepage": "https://github.com/cartridge/cartridge-node-server#readme",
-  "keywords": [
-    "gulp",
-    "dependency",
-    "cartridge",
-    "cartridge-module",
-    "cartridge-task",
-    "nodejs",
-    "server"
-  ]
+	"name": "cartridge-node-server",
+	"version": "0.0.1",
+	"description": "Node server module for the cartridge project",
+	"keywords": [
+		"gulp",
+		"dependency",
+		"cartridge",
+		"cartridge-module",
+		"cartridge-task"
+	],
+	"homepage": "https://github.com/cartridge/cartridge-node-server",
+	"bugs": {
+		"url": "https://github.com/cartridge/cartridge-node-server/issues"
+	},
+	"license": "MIT",
+	"author": "Code Computerlove <npm@codecomputerlove.co.uk>",
+	"main": "task.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cartridge/cartridge-node-server.git"
+	},
+	"scripts": {
+		"postinstall": "node scripts/postinstall.js",
+		"preuninstall": "node scripts/preuninstall.js",
+	    "test": "echo \"Error: no test specified\" && exit 0"
+	},
+	"dependencies": {
+		"cartridge-module-util": "/Sites/cartridge-module-util",
+		"yargs": "^4.3.2"
+	},
+	"devDependencies": {
+		"chai": "1.10.0",
+		"chai-fs": "^0.1.0",
+		"fs-extra": "^0.26.7",
+		"mocha": "^2.4.5"
+	},
+	"cartridgeDependencies": {
+		"bluebird": "^3.3.4",
+    "body-parser": "^1.11.0",
+    "express": "^4.11.2",
+    "express-handlebars": "^2.0.1",
+    "express-json": "^1.0.0",
+    "express-logger": "0.0.3",
+    "express-method-override": "0.0.3",
+    "multer": "^1.1.0",
+    "request": "^2.69.0",
+    "request-promise": "^2.0.0",
+    "restler": "^3.4.0",
+    "rimraf": "^2.5.2",
+    "streamifier": "^0.1.1",
+    "xml2js": "^0.4.16",
+    "xmlbuilder": "^7.0.0"
+	}
 }

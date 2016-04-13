@@ -9,6 +9,8 @@ var path          = require('path');
 
 var TASK_NAME = 'base';
 
+var nodeServerDependencies = require('./dependencies.json');
+
 function projectConfigDeletePaths(config) {
 	delete config.paths.src[TASK_NAME]
 	delete config.paths.dest[TASK_NAME]
@@ -23,5 +25,8 @@ cartridgeUtil.removeFromRc()
 	})
 	.then(function() {
 		return cartridgeUtil.removeModuleConfig(path.resolve('_config', 'task.' + TASK_NAME + '.js'));
+	})
+	.then(function() {
+		return cartridgeUtil.modifyProjectPackage(nodeServerDependencies);
 	})
 	.then(cartridgeUtil.finishUninstall)

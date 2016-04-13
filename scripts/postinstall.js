@@ -17,6 +17,8 @@ var TASK_NAME = 'nodeServer';
 // 	return config;
 // }
 
+var nodeServerDependencies = require('../package.json').dependencies;
+
 // Exit if NODE_ENV is development
 cartridgeUtil.exitIfDevEnvironment();
 // Make sure that the .cartridgerc file exists
@@ -60,8 +62,14 @@ cartridgeUtil.addToRc()
 	})
 	.then(function() {
 		//update cartride package json
+		return cartridgeUtil.addToPackage(nodeServerDependencies, ['cartridge-module-util']);
+		//return cartridgeUtil.installDependencies(nodeServerDependencies);
 	})
 	.then(function(){
-		//npm install again
+		//npm install each package
+		return cartridgeUtil.moveDependencies(nodeServerDependencies, ['cartridge-module-util']);
+	})
+	.then(function(){
+		//clean node module (itself)
 	})
 	.then(cartridgeUtil.finishInstall);

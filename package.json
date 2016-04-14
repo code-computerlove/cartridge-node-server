@@ -26,7 +26,15 @@
 	    "test": "echo \"Error: no test specified\" && exit 0"
 	},
 	"dependencies": {
-		"cartridge-module-util": "/Sites/cartridge-module-util",
+		"cartridge-module-util": "~0.2.1"
+	},
+	"devDependencies": {
+		"chai": "1.10.0",
+		"chai-fs": "^0.1.0",
+		"fs-extra": "^0.26.7",
+		"mocha": "^2.4.5"
+	},
+	"cartridge-node-server": {
 		"yargs": "^4.3.2",
 		"bluebird": "^3.3.4",
     "body-parser": "^1.11.0",
@@ -43,11 +51,5 @@
     "streamifier": "^0.1.1",
     "xml2js": "^0.4.16",
     "xmlbuilder": "^7.0.0"
-	},
-	"devDependencies": {
-		"chai": "1.10.0",
-		"chai-fs": "^0.1.0",
-		"fs-extra": "^0.26.7",
-		"mocha": "^2.4.5"
 	}
 }

@@ -9,14 +9,6 @@ var path          = require('path');
 
 var TASK_NAME = 'nodeServer';
 
-// Transform function for adding paths
-// function projectConfigAddPaths(config) {
-// 	config.paths.src[TASK_NAME]  = config.dirs.src  + '/example_dir/';
-// 	config.paths.dest[TASK_NAME] = config.dirs.dest + '/example_dir/';
-
-// 	return config;
-// }
-
 var nodeServerDependencies = require('../package.json')['cartridge-node-server'];
 
 // Exit if NODE_ENV is development
@@ -40,6 +32,9 @@ cartridgeUtil.addToRc()
 		},
 		{
 			copyPath: 'data'
+		},
+		{
+			copyPath: '_data'
 		},
 		{
 			copyPath: 'middleware'
@@ -71,5 +66,6 @@ cartridgeUtil.addToRc()
 	})
 	.then(function(){
 		//clean node module (itself)
+		return cartridgeUtil.cleanExpansionPack();
 	})
 	.then(cartridgeUtil.finishInstall);

@@ -1,42 +1,45 @@
 {
-	"name": "cartridge-node-server",
-	"version": "0.0.1",
-	"description": "Node server module for the cartridge project",
-	"keywords": [
-		"gulp",
-		"dependency",
-		"cartridge",
-		"cartridge-module",
-		"cartridge-task"
-	],
-	"homepage": "https://github.com/cartridge/cartridge-node-server",
-	"bugs": {
-		"url": "https://github.com/cartridge/cartridge-node-server/issues"
-	},
-	"license": "MIT",
-	"author": "Code Computerlove <npm@codecomputerlove.co.uk>",
-	"main": "task.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/cartridge/cartridge-node-server.git"
-	},
-	"scripts": {
-		"postinstall": "node scripts/postinstall.js",
-		"preuninstall": "node scripts/preuninstall.js",
-	    "test": "echo \"Error: no test specified\" && exit 0"
-	},
-	"dependencies": {
-		"cartridge-module-util": "~0.2.1"
-	},
-	"devDependencies": {
-		"chai": "1.10.0",
-		"chai-fs": "^0.1.0",
-		"fs-extra": "^0.26.7",
-		"mocha": "^2.4.5"
-	},
-	"cartridge-node-server": {
-		"yargs": "^4.3.2",
-		"bluebird": "^3.3.4",
+  "name": "cartridge-node-server",
+  "version": "0.0.1",
+  "description": "Node server module for the cartridge project",
+  "keywords": [
+    "gulp",
+    "dependency",
+    "cartridge",
+    "cartridge-module",
+    "cartridge-task"
+  ],
+  "homepage": "https://github.com/cartridge/cartridge-node-server",
+  "bugs": {
+    "url": "https://github.com/cartridge/cartridge-node-server/issues"
+  },
+  "license": "MIT",
+  "author": "Code Computerlove <npm@codecomputerlove.co.uk>",
+  "main": "task.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cartridge/cartridge-node-server.git"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "preuninstall": "node scripts/preuninstall.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "cartridge-module-util": "~0.2.1"
+  },
+  "devDependencies": {
+    "chai": "1.10.0",
+    "chai-fs": "^0.1.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "fs-extra": "^0.26.7",
+    "ghooks": "^1.2.1",
+    "mocha": "^2.4.5",
+    "validate-commit-msg": "^2.6.0"
+  },
+  "cartridge-node-server": {
+    "yargs": "^4.3.2",
+    "bluebird": "^3.3.4",
     "body-parser": "^1.11.0",
     "express": "^4.11.2",
     "express-handlebars": "^2.0.1",
@@ -51,5 +54,31 @@
     "streamifier": "^0.1.1",
     "xml2js": "^0.4.16",
     "xmlbuilder": "^7.0.0"
-	}
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": ""
+    }
+  }
 }

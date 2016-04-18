@@ -5,8 +5,10 @@
 To use this module, you will need [cartridge-cli](https://github.com/cartridge/cartridge-cli) installed and have a cartridge project setup.
 
 ```shell
-npm install cartridge-__EXPANSION__ --save-dev
+npm install cartridge-node-server
 ```
+
+No need to save this expansion pack. It's a core part of your dev environment so it gets baked in.
 
 This module adds the following to a project:
 
@@ -16,7 +18,7 @@ This module adds the following to a project:
 
 ## Config
 
-Once installed, the config file `task.__EXPANSION__.js` is created and stored in the `_config` directory in the root of your cartridge project.
+Once installed, you have a node server environment.
 
 ## Usage
 

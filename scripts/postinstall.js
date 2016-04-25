@@ -16,8 +16,7 @@ cartridgeUtil.exitIfDevEnvironment();
 // Make sure that the .cartridgerc file exists
 cartridgeUtil.ensureCartridgeExists();
 // Run through the project setup
-cartridgeUtil.addToRc()
-	.then(function() {
+new Promise(function() {
 		return cartridgeUtil.copyToProjectDir([{
 			copyPath: 'server.js'
 		},

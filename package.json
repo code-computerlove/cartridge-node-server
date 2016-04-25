@@ -1,6 +1,6 @@
 {
   "name": "cartridge-node-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node server module for the cartridge project",
   "keywords": [
     "gulp",

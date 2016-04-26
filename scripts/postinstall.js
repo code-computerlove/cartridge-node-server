@@ -16,8 +16,7 @@ cartridgeUtil.exitIfDevEnvironment();
 // Make sure that the .cartridgerc file exists
 cartridgeUtil.ensureCartridgeExists();
 // Run through the project setup
-new Promise(function() {
-		return cartridgeUtil.copyToProjectDir([{
+cartridgeUtil.copyToProjectDir([{
 			copyPath: 'server.js'
 		},
 		{
@@ -52,8 +51,7 @@ new Promise(function() {
 		},
 		{
 			copyPath: 'views'
-		}])
-	})
+}])
 	.then(function() {
 		//update cartride package json
 		return cartridgeUtil.addToPackage(nodeServerDependencies, ['cartridge-module-util']);

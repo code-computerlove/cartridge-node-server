@@ -1,6 +1,4 @@
-# Cartridge __EXPANSION__ [![Build Status](https://travis-ci.org/cartridge/cartridge-node-server.svg?branch=master)](https://travis-ci.org/cartridge/cartridge-__EXPANSION__)
-
-> __EXPANSION__ expansion pack for [Cartridge](https://github.com/cartridge/cartridge)
+# Cartridge Node Server installation [![Build Status](https://travis-ci.org/cartridge/cartridge-node-server.svg?branch=master)](https://travis-ci.org/cartridge/cartridge-node-server)
 
 To use this module, you will need [cartridge-cli](https://github.com/cartridge/cartridge-cli) installed and have a cartridge project setup.
 

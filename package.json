@@ -6,8 +6,7 @@
     "gulp",
     "dependency",
     "cartridge",
-    "cartridge-module",
-    "cartridge-task"
+    "cartridge-module"
   ],
   "homepage": "https://github.com/cartridge/cartridge-node-server",
   "bugs": {

@@ -5,9 +5,6 @@ var packageConfig = require('../package.json');
 
 // Node utils
 var cartridgeUtil = require('cartridge-module-util')(packageConfig);
-var path          = require('path');
-
-var TASK_NAME = 'nodeServer';
 
 var nodeServerDependencies = require('../package.json')['cartridge-node-server'];
 

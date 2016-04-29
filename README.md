@@ -1,4 +1,6 @@
-# Cartridge Node Server installation [![Build Status](https://travis-ci.org/cartridge/cartridge-node-server.svg?branch=master)](https://travis-ci.org/cartridge/cartridge-node-server)
+# Cartridge Node Server installation
+[![Build Status](https://travis-ci.org/cartridge/cartridge-node-server.svg?branch=master)](https://travis-ci.org/cartridge/cartridge-node-server)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 To use this module, you will need [cartridge-cli](https://github.com/cartridge/cartridge-cli) installed and have a cartridge project setup.
 
@@ -28,14 +30,16 @@ There is no uninstall of this module, so please be sure that when choosing to in
 
 This module deletes any trace of itself from the node_modules folder and updates your package json so that it is represented if you choose to delete your node_modules and re-install.
 
-* * * 
+* * *
 
 ## Development
-### Commit message standards [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-Try and adhere as closely as possible to the [Angular commit messages guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines).
 
-[Commitizen](https://github.com/commitizen/cz-cli) is a command line tool which can help with this:
-```sh
-npm install -g commitizen
+Please follow the instructions within the [base module development guide](https://github.com/cartridge/base-module/wiki/Development-guide) when working on this project.
+
+### Security testing
+
+This project uses [Snyk](https://snyk.io) to test for security exploits. It is checked by travis after each build, the test can be run locally by running the command:
+
+```bash
+npm run snyk
 ```
-Now, simply use `git cz` instead of `git commit` when committing.

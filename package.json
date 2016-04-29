@@ -21,7 +21,8 @@
   },
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "snyk": "snyk test"
   },
   "dependencies": {
     "cartridge-module-util": "~0.5.1"
@@ -33,6 +34,7 @@
     "fs-extra": "^0.26.7",
     "ghooks": "^1.2.1",
     "mocha": "^2.4.5",
+    "snyk": "^1.14.2",
     "validate-commit-msg": "^2.6.0"
   },
   "cartridge-node-server": {

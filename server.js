@@ -1,5 +1,7 @@
 'use strict';
 
+var DEFAULT_PORT = 3001;
+
 var express = require('express'),
 	path = require('path'),
 	logger = require('express-logger'),
@@ -31,7 +33,7 @@ app.use(require('./middleware/strip-slash'));
 // Setup routing
 require('./router')(app);
 
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || DEFAULT_PORT;
 
 app.listen(port, function(){
 	console.log('Website ready, listening on port: ' + port);

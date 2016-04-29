@@ -16,7 +16,7 @@ install:
     # - npm install mocha -g
     # - npm install gulp-cli -g
 # script:
-#     - mocha
+#     - npm run lint
 cache:
   directories:
     - node_modules

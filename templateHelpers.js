@@ -76,7 +76,7 @@
          	}
 
          	return content;
-         }
+        },
 
          /**
           * Helper that gives condition checking
@@ -109,7 +109,7 @@
              default:
                return options.inverse(this);
            }
-         };
+         },
 
          /**
           * Debug module for getting property values
@@ -125,7 +125,7 @@
            console.log('====================Debug' + name + 'start');
            console.log(propertyToDebug);
            console.log('====================Debug' + name + 'end');
-         };
+         }
     };
   };
 }());

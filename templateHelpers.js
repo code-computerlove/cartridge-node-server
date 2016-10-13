@@ -1,5 +1,5 @@
 /**
- * Moustache helpers file used in cartridge-node-server
+ * Handlebars helpers file used in cartridge-node-server
  */
 
   'use strict';

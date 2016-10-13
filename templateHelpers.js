@@ -1,3 +1,7 @@
+/**
+ * Moustache helpers file used in cartridge-node-server
+ */
+
 (function () {
   'use strict';
   module.exports = function() {
@@ -60,7 +64,7 @@
          * @example
          * {{#repeat 4}} <h{{@index}}>Hello, World!</h{{@index}}> {{/repeat}}
          */
-    	repeat: function (n, options) {
+  	    repeat: function (n, options) {
          	var content = '',
          	count = n - 1;
 
@@ -73,6 +77,55 @@
 
          	return content;
          }
+
+         /**
+          * Helper that gives condition checking
+          *
+          * @param  {*} v1               First variable
+          * @param  {String} operator    Type of comparison to be made
+          * @param  {*} v2               Second variable to compare
+          * @param  {Object} options     Handlebars options object, not required to be passed in
+          * @return {Boolean}            Condition result
+          *
+          * @example
+          * {{#ifCondition var1 '==' var2}} ..render if condition is true... {{/ifCondition}}
+          */
+         ifCondition: function (v1, operator, v2, options) {
+           switch (operator) {
+             case '===':
+               return (v1 === v2) ? options.fn(this) : options.inverse(this);
+             case '<':
+               return (v1 < v2) ? options.fn(this) : options.inverse(this);
+             case '<=':
+               return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+             case '>':
+               return (v1 > v2) ? options.fn(this) : options.inverse(this);
+             case '>=':
+               return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+             case '&&':
+               return (v1 && v2) ? options.fn(this) : options.inverse(this);
+             case '||':
+               return (v1 || v2) ? options.fn(this) : options.inverse(this);
+             default:
+               return options.inverse(this);
+           }
+         };
+
+         /**
+          * Debug module for getting property values
+          */
+         debug: function(propertyToDebug, options) {
+           var name;
+           if(options.hash.hasOwnProperty('name')) {
+             name = ' ' + options.hash.name + ' ';
+           } else {
+             name = '';
+           }
+
+           console.log('====================Debug' + name + 'start');
+           console.log(propertyToDebug);
+           console.log('====================Debug' + name + 'end');
+         };
     };
   };
 }());

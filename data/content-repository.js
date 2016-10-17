@@ -1,11 +1,9 @@
-(function () {
-  'use strict';
+'use strict';
 
-  var fileService = require('../services/file-service');
+var fileService = require('../services/file-service');
 
-  module.exports =  {
-    get: function(callback) {
-      fileService.get('content', callback);
-    }
-  };
-}());
+module.exports =  {
+  get: function(callback) {
+    fileService.get('content', callback);
+  }
+};

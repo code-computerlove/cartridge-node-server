@@ -12,7 +12,7 @@ This module adds the following to a project:
 
 This is not a typical cartridge expansion pack.  This bakes a node server into your cartridge project. It uses [Node.js](https://nodejs.org/) and [express](http://expressjs.com/) to build the server and present the html through port 3001.
 
-This mdule also uses [handlebars tempating](http://handlebarsjs.com) on the server side to compile the html.
+This module also uses [handlebars tempating](http://handlebarsjs.com) on the server side to compile the html.
 
 
 ## Config

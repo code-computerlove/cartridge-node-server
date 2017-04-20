@@ -1,12 +1,13 @@
 'use strict';
 
-var express = require('express'),
-	path = require('path'),
-	logger = require('express-logger'),
-	json = require('express-json'),
-	bodyParser = require('body-parser'),
-	methodOverride = require('express-method-override'),
-	exphbs = require('express-handlebars');
+var path = require('path');
+
+var express = require('express');
+var logger = require('express-logger');
+var json = require('express-json');
+var bodyParser = require('body-parser');
+var methodOverride = require('express-method-override');
+var exphbs = require('express-handlebars');
 
 var app = express();
 
